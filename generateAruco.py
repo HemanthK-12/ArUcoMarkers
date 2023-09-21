@@ -26,7 +26,7 @@ ARUCO_DICT = {
 }
 
 
-aruco_type = "DICT_5X5_250"
+aruco_type = "DICT_5X5_100"
 id = 1
 
 arucoDict = cv2.aruco.Dictionary_get(ARUCO_DICT[aruco_type])
