@@ -12,7 +12,11 @@ Go to Visual Studio Code,click Ctrl+Shift+P,search Python:Create Environment and
 Run the following commands:
 
 pip install --upgrade pip
+
+
 pip install numpy
+
+
 pip install opencv-contrib-python==4.6.0.66
 
 
@@ -28,6 +32,8 @@ Click the drop down button in the newly opened terminal after clicking Ctrl+Shif
 Run the following commands 
 
 python generateAruco.py
+
+
 python arucoDetection.py
 
 
