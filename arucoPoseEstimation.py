@@ -70,7 +70,7 @@ intrinsic_parameters = np.array([[800, 0, 320], [0, 800, 240], [0, 0, 1]], dtype
 aruco_type = cv2.aruco.Dictionary_get(cv2.aruco.DICT_6X6_1000)
 
 #Edge length of aruco markers,only for calibration,here for redundancy
-sidelength_marker = 0.02
+sidelength_marker = 0.04
 
 #This turns on the webcam.
 cap = cv2.VideoCapture(0)
@@ -85,7 +85,7 @@ while (cap.isOpened()):
         rotationvecs, translationvecs, _ = cv2.aruco.estimatePoseSingleMarkers(corners, sidelength_marker, intrinsic_parameters, distortioncoeffs)
         print(f"{rotationvecs} \n")
         for i in range(len(ids)):
-            frame = cv2.drawFrameAxes(frame, intrinsic_parameters, distortioncoeffs,rotationvecs[i],translationvecs[i], 0.02)  
+            frame = cv2.drawFrameAxes(frame, intrinsic_parameters, distortioncoeffs,rotationvecs[i],translationvecs[i], 0.04)  
     cv2.aruco.drawDetectedMarkers(frame, corners)
     cv2.imshow('frame', cv2.flip(frame, 1))
 
